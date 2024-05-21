@@ -22,6 +22,8 @@
     "paths": {
       "@/*": ["src/*"]
     },
+
+    "baseUrl": ".",
   },
   "include": ["src"]
 }

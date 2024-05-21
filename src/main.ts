@@ -1,11 +1,12 @@
-import "@/styles/index.scss"; // imports the default styles
-import {drawSmiley, getMessage} from "@/scripts/welcome.ts";
+import "@/styles/index.scss";
+import type {Practice} from "@/scripts/_base.ts";
+import {PracticeO3} from "@/scripts/03.ts";
 
-const app = document.querySelector('#app') as HTMLDivElement; // selects the entry point of the HTML
+const app = document.querySelector('#app') as HTMLDivElement;
 
-app.innerHTML = `
-    <h1>${getMessage()}</h1>
-    <svg id="smiley"></svg>
-`;
+function loadPractice(construct: new () => Practice) {
+    const inst = new construct();
+    inst.render(app);
+}
 
-drawSmiley();
+loadPractice(PracticeO3);

@@ -1,8 +1,10 @@
-h1 {
-  font-size: 2em;
-  color: red;
+@use "practice01";
 
-  #smiley {
-    margin-top: 2rem;
-  }
+#app {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
 }
